@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styleInicio.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="imagem/cabeçalho.jpg" alt=>
+        </div>
+        <div class="menu">
+            <button id="btnPerfil">Meu Perfil</button>
+           <button id="btnSobre" >
+           <a href="sobre.html">Sobre</a> 
+           </button>
+            
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h2>Perfil do Leitor</h2>
+
+            <div class="icone">👤</div>
+
+            <p><strong>Nome:</strong> <span id="nome"></span></p>
+
+            <p><strong>Nickname:</strong> <span id="nickname"></span></p>
+
+            <label>Frase favorita</label>
+
+            <input type="text" id="frase" placeholder="Digite sua frase favorita">
+
+            <label>Livro do momento</label>
+
+            <input type="text" id="livro" placeholder="Nome do livro">
+
+            <button onclick="salvarPerfil()">
+                Salvar Perfil
+            </button>
+
+            <button class="btn-limpar" onclick="limparPerfil()">
+                Limpar Perfil
+            </button>
+
+            <hr>
+
+            <h3>Seu Perfil</h3>
+
+            <p><strong>Frase:</strong></p>
+
+            <p id="fraseSalva" class="caixa"></p>
+
+            <p><strong>Lendo atualmente:</strong></p>
+
+            <p id="livroSalvo" class="caixa"></p>
+
+        </div>
+
+        <!-- Estante -->
+        <div class="card-estante">
+
+            <h2>Minha Estante</h2>
+
+            <div class="formulario">
+
+                <input type="text" id="nomeLivro" placeholder="Nome do livro">
+
+                <input type="text" id="autor" placeholder="Autor">
+
+                <select id="formato">
+
+                    <option value="">Formato</option>
+
+                    <option>Físico</option>
+
+                    <option>E-book</option>
+
+                    <option>PDF</option>
+
+                    <option>Audiobook</option>
+
+                </select>
+
+                <input type="number" id="paginas" placeholder="Quantidade de páginas">
+
+                <input type="number" id="avaliacao" placeholder="Avaliação (1 a 5)" min="1" max="5">
+
+                <button onclick="cadastrarLivro()">
+                    Cadastrar Livro
+                </button>
+                <button class="btn-limpar" onclick="limparEstante()">
+                    Limpar Estante
+                </button>
+
+            </div>
+
+            <hr>
+
+            <input type="text" id="pesquisa" placeholder="🔎 Pesquisar livro..." onkeyup="mostrarLivros()">
+
+            <div id="listaLivros"></div>
+            <div class="lista-estante">
+
+                <div id="listaLivros"></div>
+
+            </div>
+        </div>
+
+
+        <!-- Quero Ler -->
+        <div class="card-lista">
+
+            <h2>📖 Quero Ler</h2>
+
+            <input type="text" id="novoDesejo" placeholder="Nome do livro">
+
+            <button onclick="adicionarDesejo()">
+                Adicionar
+            </button>
+
+            <hr>
+
+            <input type="text" id="pesquisaDesejo" placeholder="🔎 Pesquisar..." onkeyup="mostrarDesejos()">
+
+            <div id="listaDesejos"></div>
+
+        </div>
+
+        <!-- Livros Lidos -->
+        <div class="card-lista">
+
+            <h2>✅ Livros Lidos no Ano</h2>
+
+            <input type="text" id="novoLido" placeholder="Nome do livro">
+
+            <button onclick="adicionarLido()">
+                Adicionar
+            </button>
+
+            <hr>
+
+            <input type="text" id="pesquisaLido" placeholder="🔎 Pesquisar..." onkeyup="mostrarLidos()">
+
+            <div id="listaLidos"></div>
+
+        </div>
+    </div>
+
+    <footer align="center">
+        <p>&copy; 2026 Leitor de Livros. Todos os direitos reservados® </p>
+    </footer>
+    <script src="inicio.js"></script>
+
+</body>
+
+</html>
