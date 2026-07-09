@@ -1,0 +1,372 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: linear-gradient(180deg, #563268, #8e6ea4, #b89ac6);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+h1 {
+
+    text-align: center;
+
+    color: #563268;
+
+    margin: 30px;
+
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.container {
+    width: 95%;
+    max-width: 1400px;
+
+    margin: 30px auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+
+    align-items: stretch;
+}
+
+.card,
+.card-estante,
+.card-lista {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+
+    max-height: 800px;   /* ajuste conforme desejar */
+    overflow-y: auto;
+}
+
+.card-lista div {
+
+    margin-top: 20px;
+
+    max-height: 300px;
+
+    overflow-y: auto;
+}
+
+.itemLista {
+
+    background: #f7f7f7;
+
+    padding: 12px;
+
+    border-left: 5px solid #563268;
+
+    border-radius: 8px;
+
+    margin-bottom: 12px;
+}
+
+h2 {
+
+    text-align: center;
+
+    color: #563268;
+
+}
+
+.icone {
+
+    font-size: 70px;
+
+    text-align: center;
+
+    margin: 15px;
+
+}
+
+.btn-limpar {
+
+    margin-top: 10px;
+
+    background: #b53d3d;
+
+}
+
+.btn-limpar:hover {
+
+    background: #8b2b2b;
+
+}
+
+label {
+
+    display: block;
+
+    margin-top: 15px;
+
+    font-weight: bold;
+
+}
+
+input,
+select {
+
+    width: 100%;
+
+    padding: 10px;
+
+    margin-top: 8px;
+
+    margin-bottom: 15px;
+
+    border-radius: 8px;
+
+    border: 1px solid #ccc;
+
+    box-sizing: border-box;
+
+}
+
+button {
+
+    width: 100%;
+
+    padding: 12px;
+
+    background: #563268;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+}
+
+button:hover {
+
+    background: #563268;
+
+}
+
+.caixa {
+
+    background: #f7f7f7;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    min-height: 22px;
+
+    word-break: break-word;
+
+}
+
+#listaLivros {
+
+    max-height: 350px;
+
+    overflow-y: auto;
+
+    margin-top: 20px;
+
+    padding-right: 8px;
+}
+
+#listaLivros::-webkit-scrollbar {
+
+    width: 8px;
+
+}
+
+#listaLivros::-webkit-scrollbar-thumb {
+
+    background: #563268;
+
+    border-radius: 10px;
+
+}
+
+.livro {
+
+    background: #f7f7f7;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    margin-bottom: 15px;
+
+    border-left: 5px solid #563268;
+
+}
+
+.livro h3 {
+
+    margin-top: 0;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header {
+    width: 95%;
+    max-width: 1400px;
+
+    margin: 20px auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    background: #fff;
+    padding: 20px 30px;
+
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    width: 300px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.logo h1 {
+    color: white;
+    font-size: 30px;
+    font-family: Georgia, serif;
+}
+
+.menu {
+    display: flex;
+    gap: 15px;
+}
+
+.menu button {
+    width: 170px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: white;
+}
+
+#btnPerfil {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #8e6ea4;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#btnPerfil:hover {
+    background-color: #3c194b;
+    ;
+}
+
+#btnSobre {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #8e6ea4;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+#btnSobre:hover {
+    background-color: #3c194b;
+}
+
+@media (max-width:900px) {
+
+    header {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 20px;
+
+    }
+
+    .menu {
+
+        width: 100%;
+
+        flex-direction: column;
+
+    }
+
+    .menu button {
+
+        width: 100%;
+    }
+
+    .container {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        grid-template-columns: 1fr;
+    }
+
+    .card,
+    .card-estante {
+
+        width: 100%;
+
+        max-width: 600px;
+    }
+
+    .logo img {
+
+        width: 230px;
+        height: auto;
+    }
+
+}
+
+.card-estante::-webkit-scrollbar{
+    width:8px;
+}
+
+.card-estante::-webkit-scrollbar-thumb{
+    background:#563268;
+    border-radius:10px;
+}
+
+.card-estante::-webkit-scrollbar-track{
+    background:#f1f1f1;
+}
